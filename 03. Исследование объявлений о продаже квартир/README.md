@@ -4,12 +4,51 @@
 
 По каждой квартире на продажу доступны два вида данных. Первые вписаны пользователем, вторые — получены автоматически на основе картографических данных. Например, расстояние до центра, аэропорта, ближайшего парка и водоёма. 
 
-<a id='intro'></a>
+# Содержание
 
-<h1>Содержание<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Откройте-файл-с-данными-и-изучите-общую-информацию." data-toc-modified-id="Откройте-файл-с-данными-и-изучите-общую-информацию.-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Откройте файл с данными и изучите общую информацию.</a></span></li><li><span><a href="#Предобработка-данных" data-toc-modified-id="Предобработка-данных-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Предобработка данных</a></span><ul class="toc-item"><li><span><a href="#Переименование-столбца" data-toc-modified-id="Переименование-столбца-2.1"><span class="toc-item-num">2.1&nbsp;&nbsp;</span>Переименование столбца</a></span></li><li><span><a href="#Столбец-total_images" data-toc-modified-id="Столбец-total_images-2.2"><span class="toc-item-num">2.2&nbsp;&nbsp;</span>Столбец <code>total_images</code></a></span></li><li><span><a href="#Столбец-last_price" data-toc-modified-id="Столбец-last_price-2.3"><span class="toc-item-num">2.3&nbsp;&nbsp;</span>Столбец <code>last_price</code></a></span></li><li><span><a href="#Столбец-total_area" data-toc-modified-id="Столбец-total_area-2.4"><span class="toc-item-num">2.4&nbsp;&nbsp;</span>Столбец <code>total_area</code></a></span></li><li><span><a href="#Столбец-first_day_exposition" data-toc-modified-id="Столбец-first_day_exposition-2.5"><span class="toc-item-num">2.5&nbsp;&nbsp;</span>Столбец <code>first_day_exposition</code></a></span></li><li><span><a href="#Столбец-rooms" data-toc-modified-id="Столбец-rooms-2.6"><span class="toc-item-num">2.6&nbsp;&nbsp;</span>Столбец <code>rooms</code></a></span></li><li><span><a href="#Столбец-ceiling_height" data-toc-modified-id="Столбец-ceiling_height-2.7"><span class="toc-item-num">2.7&nbsp;&nbsp;</span>Столбец <code>ceiling_height</code></a></span></li><li><span><a href="#Столбец-floors_total" data-toc-modified-id="Столбец-floors_total-2.8"><span class="toc-item-num">2.8&nbsp;&nbsp;</span>Столбец <code>floors_total</code></a></span></li><li><span><a href="#Столбец-living_area" data-toc-modified-id="Столбец-living_area-2.9"><span class="toc-item-num">2.9&nbsp;&nbsp;</span>Столбец <code>living_area</code></a></span></li><li><span><a href="#Столбец-floor" data-toc-modified-id="Столбец-floor-2.10"><span class="toc-item-num">2.10&nbsp;&nbsp;</span>Столбец <code>floor</code></a></span></li><li><span><a href="#Столбец-is_apartment" data-toc-modified-id="Столбец-is_apartment-2.11"><span class="toc-item-num">2.11&nbsp;&nbsp;</span>Столбец <code>is_apartment</code></a></span></li><li><span><a href="#Столбец--studio" data-toc-modified-id="Столбец--studio-2.12"><span class="toc-item-num">2.12&nbsp;&nbsp;</span>Столбец  <code>studio</code></a></span></li><li><span><a href="#Столбец-open_plan" data-toc-modified-id="Столбец-open_plan-2.13"><span class="toc-item-num">2.13&nbsp;&nbsp;</span>Столбец <code>open_plan</code></a></span></li><li><span><a href="#Столбец-kitchen_area" data-toc-modified-id="Столбец-kitchen_area-2.14"><span class="toc-item-num">2.14&nbsp;&nbsp;</span>Столбец <code>kitchen_area</code></a></span></li><li><span><a href="#Столбец-balcony" data-toc-modified-id="Столбец-balcony-2.15"><span class="toc-item-num">2.15&nbsp;&nbsp;</span>Столбец <code>balcony</code></a></span></li><li><span><a href="#Столбец-locality_name" data-toc-modified-id="Столбец-locality_name-2.16"><span class="toc-item-num">2.16&nbsp;&nbsp;</span>Столбец <code>locality_name</code></a></span></li><li><span><a href="#Столбец-airports_nearest" data-toc-modified-id="Столбец-airports_nearest-2.17"><span class="toc-item-num">2.17&nbsp;&nbsp;</span>Столбец <code>airports_nearest</code></a></span></li><li><span><a href="#Столбец-city_centers_nearest" data-toc-modified-id="Столбец-city_centers_nearest-2.18"><span class="toc-item-num">2.18&nbsp;&nbsp;</span>Столбец <code>city_centers_nearest</code></a></span></li><li><span><a href="#Столбец-parks_around3000" data-toc-modified-id="Столбец-parks_around3000-2.19"><span class="toc-item-num">2.19&nbsp;&nbsp;</span>Столбец <code>parks_around3000</code></a></span></li><li><span><a href="#Столбец-parks_nearest" data-toc-modified-id="Столбец-parks_nearest-2.20"><span class="toc-item-num">2.20&nbsp;&nbsp;</span>Столбец <code>parks_nearest</code></a></span></li><li><span><a href="#Столбец-ponds_around3000" data-toc-modified-id="Столбец-ponds_around3000-2.21"><span class="toc-item-num">2.21&nbsp;&nbsp;</span>Столбец <code>ponds_around3000</code></a></span></li><li><span><a href="#Столбец-ponds_nearest" data-toc-modified-id="Столбец-ponds_nearest-2.22"><span class="toc-item-num">2.22&nbsp;&nbsp;</span>Столбец <code>ponds_nearest</code></a></span></li><li><span><a href="#Столбец-days_exposition" data-toc-modified-id="Столбец-days_exposition-2.23"><span class="toc-item-num">2.23&nbsp;&nbsp;</span>Столбец <code>days_exposition</code></a></span></li><li><span><a href="#Поиск-и-удаление-дубликатов" data-toc-modified-id="Поиск-и-удаление-дубликатов-2.24"><span class="toc-item-num">2.24&nbsp;&nbsp;</span>Поиск и удаление дубликатов</a></span></li><li><span><a href="#Изменение-типов-данных" data-toc-modified-id="Изменение-типов-данных-2.25"><span class="toc-item-num">2.25&nbsp;&nbsp;</span>Изменение типов данных</a></span></li><li><span><a href="#Вывод" data-toc-modified-id="Вывод-2.26"><span class="toc-item-num">2.26&nbsp;&nbsp;</span>Вывод</a></span></li></ul></li><li><span><a href="#Посчитайте-и-добавьте-в-таблицу-новые-столбцы" data-toc-modified-id="Посчитайте-и-добавьте-в-таблицу-новые-столбцы-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Посчитайте и добавьте в таблицу новые столбцы</a></span><ul class="toc-item"><li><span><a href="#Цена-одного-квадратного-метра" data-toc-modified-id="Цена-одного-квадратного-метра-3.1"><span class="toc-item-num">3.1&nbsp;&nbsp;</span>Цена одного квадратного метра</a></span></li><li><span><a href="#День-недели-публикации-объявления-|-Месяц-публикации-объявления-|-Год-публикации-объявления" data-toc-modified-id="День-недели-публикации-объявления-|-Месяц-публикации-объявления-|-Год-публикации-объявления-3.2"><span class="toc-item-num">3.2&nbsp;&nbsp;</span>День недели публикации объявления | Месяц публикации объявления | Год публикации объявления</a></span></li><li><span><a href="#Тип-этажа-квартиры" data-toc-modified-id="Тип-этажа-квартиры-3.3"><span class="toc-item-num">3.3&nbsp;&nbsp;</span>Тип этажа квартиры</a></span></li><li><span><a href="#Расстояние-до-центра-города-в-километрах" data-toc-modified-id="Расстояние-до-центра-города-в-километрах-3.4"><span class="toc-item-num">3.4&nbsp;&nbsp;</span>Расстояние до центра города в километрах</a></span></li></ul></li><li><span><a href="#Проведите-исследовательский-анализ-данных" data-toc-modified-id="Проведите-исследовательский-анализ-данных-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Проведите исследовательский анализ данных</a></span><ul class="toc-item"><li><span><a href="#Изучаем-параметры-объектов" data-toc-modified-id="Изучаем-параметры-объектов-4.1"><span class="toc-item-num">4.1&nbsp;&nbsp;</span>Изучаем параметры объектов</a></span></li><li><span><a href="#Изучаем,-как-быстро-продавались-квартиры" data-toc-modified-id="Изучаем,-как-быстро-продавались-квартиры-4.2"><span class="toc-item-num">4.2&nbsp;&nbsp;</span>Изучаем, как быстро продавались квартиры</a></span></li><li><span><a href="#Факторы-больше-всего-влияющие-на-общую-(полную)-стоимость-объекта" data-toc-modified-id="Факторы-больше-всего-влияющие-на-общую-(полную)-стоимость-объекта-4.3"><span class="toc-item-num">4.3&nbsp;&nbsp;</span>Факторы больше всего влияющие на общую (полную) стоимость объекта</a></span></li><li><span><a href="#Средняя-цена-одного-квадратного-метра." data-toc-modified-id="Средняя-цена-одного-квадратного-метра.-4.4"><span class="toc-item-num">4.4&nbsp;&nbsp;</span>Средняя цена одного квадратного метра.</a></span></li><li><span><a href="#Средняя-цена-километра-в-Санкт-Петербурге" data-toc-modified-id="Средняя-цена-километра-в-Санкт-Петербурге-4.5"><span class="toc-item-num">4.5&nbsp;&nbsp;</span>Средняя цена километра в Санкт-Петербурге</a></span></li></ul></li><li><span><a href="#Общий-вывод" data-toc-modified-id="Общий-вывод-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Общий вывод</a></span></li></ul></div>
+- 1  Откройте файл с данными и изучите общую информацию.
+- 2  Предобработка данных
+    - 2.1  Переименование столбца
+    - 2.2  Столбец total_images
+    - 2.3  Столбец last_price
+    - 2.4  Столбец total_area
+    - 2.5  Столбец first_day_exposition
+    - 2.6  Столбец rooms
+    - 2.7  Столбец ceiling_height
+    - 2.8  Столбец floors_total
+    - 2.9  Столбец living_area
+    - 2.10  Столбец floor
+    - 2.11  Столбец is_apartment
+    - 2.12  Столбец studio
+    - 2.13  Столбец open_plan
+    - 2.14  Столбец kitchen_area
+    - 2.15  Столбец balcony
+    - 2.16  Столбец locality_name
+    - 2.17  Столбец airports_nearest
+    - 2.18  Столбец city_centers_nearest
+    - 2.19  Столбец parks_around3000
+    - 2.20  Столбец parks_nearest
+    - 2.21  Столбец ponds_around3000
+    - 2.22  Столбец ponds_nearest
+    - 2.23  Столбец days_exposition
+    - 2.24  Поиск и удаление дубликатов
+    - 2.25  Изменение типов данных
+    - 2.26  Вывод
+- 3  Посчитайте и добавьте в таблицу новые столбцы
+    - 3.1  Цена одного квадратного метра
+    - 3.2  День недели публикации объявления | Месяц публикации объявления | Год публикации объявления
+    - 3.3  Тип этажа квартиры
+    - 3.4  Расстояние до центра города в километрах
+- 4  Проведите исследовательский анализ данных
+    - 4.1  Изучаем параметры объектов
+    - 4.2  Изучаем, как быстро продавались квартиры
+    - 4.3  Факторы больше всего влияющие на общую (полную) стоимость объекта
+    - 4.4  Средняя цена одного квадратного метра.
+    - 4.5  Средняя цена километра в Санкт-Петербурге
+- 5  Общий вывод
 
-**Описание данных**
+
+# Описание данных
 
 `airports_nearest` — расстояние до ближайшего аэропорта в метрах (м)  
 `balcony` — число балконов  
@@ -35,7 +74,6 @@
 `total_images` — число фотографий квартиры в объявлении
 
 # Общий вывод
-
 
 Для анализа была дана база с информацией по продаже квартир. Состоял из 22 колонок и 23699 строк. 
 В процессе предобработки было удалено 17 строк (осталось 23682 строк, удалено 0,07% данных) - это хорошо.
