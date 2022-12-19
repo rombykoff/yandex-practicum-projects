@@ -69,7 +69,6 @@
 - `username` — имя пользователя, написавшего обзор;
 - `text` — текст обзора.
 
-![Untitled_%2833%29.png](attachment:Untitled_%2833%29.png)
 
 # Задачи
 
