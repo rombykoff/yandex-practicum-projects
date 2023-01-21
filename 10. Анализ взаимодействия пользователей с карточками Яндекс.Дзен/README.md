@@ -33,3 +33,6 @@
 
 # Дашборд и презентация
 
+Ссылка на дашборд - https://public.tableau.com/app/profile/roman.bykov/viz/da_practicum_project_dash/Dashboard1
+
+Ссылка на презентацию - https://disk.yandex.ru/i/gbqUTtxLsqweoA
